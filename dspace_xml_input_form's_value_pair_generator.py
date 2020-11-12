@@ -24,9 +24,9 @@ for fn in uploaded.keys():
 
 filename = open(fn, "r")
 li = filename.read().split('\n') 
-li = [x.strip(' ') for x in li] # removes white spaces from beggining and end of each name
+li = [x.strip(' ') for x in li] # removes spaces from beggining and end of each name
 for y in range(len(li)):
-  #creates dspace form input tags with names and shows output to screen.
+  #creates dspace xml form input tags with list (of names) and shows output to screen.
   displayvalue = "\t<displayed-value>" + li[y].strip() + "</displayed-value> "
   storedvalue = "\t<stored-value>" + li[y] + "</stored-value> "
   print ("<pair>\n" + displayvalue + "\n" + storedvalue + "\n</pair>\n")
